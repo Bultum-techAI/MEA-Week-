@@ -277,6 +277,29 @@ a.btn{text-decoration:none}
 .lb-col .lb-name .nm{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.84rem}
 .lb-col .lb-name small{font-size:.68rem}
 @media (max-width:420px){.lb-col .lb-name .nm{font-size:.78rem}}
+
+.hero2{position:relative;overflow:hidden;text-align:center;padding:22px 16px 18px;background:linear-gradient(160deg,#4dabf7 0%,#6c5ce7 55%,#d63aa7 100%);color:#fff;border:none;box-shadow:0 12px 28px rgba(80,60,200,.35)}
+.hero2 .mascot{width:92px;height:92px;margin:0 auto 4px;display:block;animation:wig 2.6s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.hero2 h2.big{font-size:2.15rem;line-height:1.02;margin:.1rem 0 .35rem;letter-spacing:-1px;text-shadow:0 3px 0 rgba(60,30,120,.35);color:#fff}
+.hero2 h2.big span{color:#ffe14d}
+.hero2 .tag{margin:0 auto;font-weight:800;font-size:.98rem;max-width:300px;color:#fff;line-height:1.3}
+.kicker2{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.float{position:absolute;font-size:1.5rem;opacity:.9;animation:flt 4s ease-in-out infinite;pointer-events:none}
+.f1{left:8%;top:12%}.f2{right:9%;top:10%;animation-delay:.6s}.f3{left:6%;bottom:16%;animation-delay:1.1s}.f4{right:7%;bottom:18%;animation-delay:1.6s}.f5{left:50%;top:3%;animation-delay:2s;font-size:1.2rem}
+@keyframes wig{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.hero2 .mascot,.float{animation:none}}
+.prizes{display:flex;flex-direction:column;gap:10px;margin:0 0 16px}
+.pz{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:20px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.14)}
+.pz.gold{background:linear-gradient(135deg,#ffb300,#ff7a00)}
+.pz.pink{background:linear-gradient(135deg,#ff5e9c,#a64bff)}
+.pz .pe{font-size:2.6rem;line-height:1;flex:0 0 auto;filter:drop-shadow(0 3px 4px rgba(0,0,0,.2))}
+.pz .pt{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+.pz .pt small{font-weight:800;font-size:.68rem;letter-spacing:.1em;opacity:.95}
+.pz .pt b{font-size:1.35rem;font-weight:900;letter-spacing:-.4px;text-shadow:0 2px 0 rgba(0,0,0,.15)}
+.pz .pt span{font-weight:700;font-size:.82rem;opacity:.95;margin-top:2px}
+.pz-note{text-align:center;font-weight:800;font-size:.8rem;color:var(--ink2)}
+#startBtn{font-size:1.15rem;padding:16px}
 </style>
 </head>
 <body>
@@ -296,8 +319,8 @@ a.btn{text-decoration:none}
 
   <!-- HOME -->
   <div class="view" id="v-home">
-    <div class="card hero">
-      <span class="kicker">Grades K–8 · Day 1 to Day 4</span>
+    <div class="card hero2">
+      <span class="float f1">⭐</span><span class="float f2">🎈</span><span class="float f3">🍦</span><span class="float f4">⚽</span><span class="float f5">🏆</span>
       <svg class="mascot" viewBox="0 0 120 120">
         <circle cx="60" cy="62" r="40" fill="#ffd34d"/>
         <path d="M60 14l8 18 20 2-15 14 4 20-17-10-17 10 4-20-15-14 20-2z" fill="#ffb43d"/>
@@ -305,36 +328,31 @@ a.btn{text-decoration:none}
         <path d="M46 74q14 12 28 0" stroke="#3a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>
         <circle cx="40" cy="70" r="5" fill="#ff8aa0" opacity=".6"/><circle cx="80" cy="70" r="5" fill="#ff8aa0" opacity=".6"/>
       </svg>
-      <h2>Learn. Earn points.<br>Climb the leaderboard!</h2>
-      <p class="muted">Keep your brain strong over MEA break! Finish missions on what you learned in class, play Math Facts, and use <b>Learn &amp; Practice</b> to get even stronger. Climb the leaderboard and win real prizes! 🌟</p>
+      <h2 class="big">Play. Score. <span>WIN!</span></h2>
+      <p class="tag">Answer questions ⭐ Earn points 🏆 Climb the leaderboard!</p>
+      <span class="kicker2">Grades K–8 · Day 1 to Day 4</span>
     </div>
-    <div class="prize-card">
-      <div class="prize-card-head">🏆 Play to WIN! 🏆</div>
-      <div class="prize-row">
-        <div class="prize-emoji">🎟️</div>
-        <div class="prize-text"><b>MEA Break Champions</b><span>(#1 on the K–5 board and #1 on the Middle School board) each get a FREE Mall of America ticket!</span></div>
-      </div>
-      <div class="prize-row">
-        <div class="prize-emoji">🎁</div>
-        <div class="prize-text"><b>Top 3 on each leaderboard</b><span>win a free prize box — soccer balls, treats &amp; more!</span></div>
-      </div>
+    <div class="prizes">
+      <div class="pz gold"><div class="pe">🍦</div><div class="pt"><small>#1 ON EACH LEADERBOARD</small><b>Cold Stone Gift Card!</b></div></div>
+      <div class="pz pink"><div class="pe">🎁</div><div class="pt"><small>TOP 3 ON EACH LEADERBOARD</small><b>Prize Box!</b><span>⚽ Soccer balls · 🍬 Treats · and more</span></div></div>
+      <div class="pz-note">🎒 K–5 and 🎓 Middle School have their own leaderboards</div>
     </div>
     <div class="card">
       <label class="fld" for="fn">First name</label>
       <input id="fn" type="text" placeholder="First name" autocomplete="given-name" maxlength="24">
       <label class="fld" for="ln">Last name</label>
       <input id="ln" type="text" placeholder="Last name" autocomplete="family-name" maxlength="24">
-      <label class="fld">Pick your grade</label>
+      <label class="fld">Pick your grade 👇</label>
       <div class="grade-grid" id="gradeGrid"></div>
       <div style="height:16px"></div>
-      <button class="btn" id="startBtn">Start my quest <span>→</span></button>
+      <button class="btn" id="startBtn">Let's play! 🚀</button>
       <div style="height:10px"></div>
       <div class="btnrow">
         <button class="btn ghost sm" onclick="show('rules')">📜 How to play</button>
         <button class="btn ghost sm" onclick="show('board')">🏆 Leaderboard</button>
       </div>
     </div>
-    <div class="footer">An MEA break learning challenge · built from what your teachers taught this fall</div>
+    <div class="footer">Bultum Academy · MEA Break Quest 🌳</div>
   </div>
 
   <!-- HUB -->
@@ -348,7 +366,7 @@ a.btn{text-decoration:none}
         </div>
       </div>
     </div>
-    <div class="prize-strip">🎁 <span><b>Top 3 on each leaderboard</b> win a prize box (soccer balls, treats &amp; more), and the <b>MEA Break Champion of each leaderboard</b> (K–5 and Middle School) gets a <b>FREE Mall of America ticket</b>!</span></div>
+    <div class="prize-strip">🎁 <span><b>Top 3 on each leaderboard</b> win a prize box (soccer balls, treats &amp; more), and the <b>MEA Break Champion of each leaderboard</b> (K–5 and Middle School) gets a <b>FREE Cold Stone gift card</b>!</span></div>
     <div class="tile weekly" onclick="show('weeks')">
       <div class="ic"><svg viewBox="0 0 24 24" fill="#fff"><path d="M4 4h16v4H4zM4 10h7v10H4zM13 10h7v10h-7z"/></svg></div>
       <div><h3>Break Missions</h3><p id="weeklySub">Day 1–4 · 5 math + 5 reading each</p></div>
@@ -471,7 +489,7 @@ a.btn{text-decoration:none}
       <div class="rule"><div class="rn">🔓</div><div><h4>Unlock the next day</h4><p>The next day opens once you've <b>finished the day before it</b> and spent at least <b>2 minutes</b> in the Math Facts Arcade. Keep practicing to keep climbing!</p></div></div>
       <div class="rule"><div class="rn">⚡</div><div><h4>Math Facts Arcade — everyone plays!</h4><p><b>Quick Facts</b> earn <b>1 point</b> each and match your grade: Kindergarten adds and subtracts within 5, 1st grade within 10, 2nd grade within 20, and 3rd grade practices × and ÷ facts. Older grades use single-digit facts. From 1st grade up you also unlock the <b>Bonus Round</b> (<b>2 points</b> each): within 20 in 1st grade, within 100 in 2nd, and two-digit numbers from 3rd grade up. Younger grades get more time. These points count toward your total and help unlock the next day.</p></div></div>
       <div class="rule"><div class="rn">🏆</div><div><h4>Climb the leaderboard</h4><p>Your question points and Math Facts points combine into one <b>Total Points</b> score. <b>K–5</b> and <b>Middle School</b> each have their own leaderboard, side by side. The more you play, the higher you climb!</p></div></div>
-      <div class="rule"><div class="rn">🎁</div><div><h4>Win real prizes!</h4><p>The <b>Top 3</b> on each leaderboard (K–5 and Middle School) win a free <b>prize box</b> at Bultum — soccer balls, treats, and more. And the <b>MEA Break Champion</b> — the student at the top of each Total Points leaderboard — earns a <b>FREE Mall of America ticket</b>!</p></div></div>
+      <div class="rule"><div class="rn">🎁</div><div><h4>Win real prizes!</h4><p>The <b>Top 3</b> on each leaderboard (K–5 and Middle School) win a free <b>prize box</b> at Bultum — soccer balls, treats, and more. And the <b>MEA Break Champion</b> — the student at the top of each Total Points leaderboard — earns a <b>FREE Cold Stone gift card</b>!</p></div></div>
     </div>
     <button class="btn" onclick="show(LAST_HUB?'hub':'home')">Got it! Let's play</button>
   </div>
@@ -489,13 +507,15 @@ a.btn{text-decoration:none}
    Get this from Firebase Console → Project settings → Your apps.
    ============================================================ */
 const FIREBASE_CONFIG = {
-  apiKey: "AIzaSyBL0CoP33Y5rhOWKHXGsButsAS6IMdMjAI",
-  authDomain: "summer-star-quest.firebaseapp.com",
-  databaseURL: "https://summer-star-quest-default-rtdb.firebaseio.com",
-  projectId: "summer-star-quest",
-  storageBucket: "summer-star-quest.firebasestorage.app",
-  messagingSenderId: "806125113470",
-  appId: "1:806125113470:web:6785495af38752edce482f"
+  apiKey: "AIzaSyD0Vf5Wtq2qc6XXxM7xOV-4n23cvdMtZUs",
+  authDomain: "meaweekchallange.firebaseapp.com",
+  /* Realtime Database link: copy it from Firebase > Build > Realtime Database > Data tab (top of the page).
+     If yours is different from this one, replace it. */
+  databaseURL: "https://meaweekchallange-default-rtdb.firebaseio.com",
+  projectId: "meaweekchallange",
+  storageBucket: "meaweekchallange.firebasestorage.app",
+  messagingSenderId: "601186564827",
+  appId: "1:601186564827:web:e41a45d79432a85f4caafe"
 };
 </script>
 <script>
@@ -1458,6 +1478,8 @@ function nameProblem(first,last){
   if(!nameOk(first)||!nameOk(last)||!nameOk(first+' '+last)) return 'Please use your real first and last name 🙂';
   return '';
 }
+/* tidy capitals: zed -> Zed, ZED -> Zed; mixed-case names like DeShawn are left alone */
+function prettyName(s){ return String(s).replace(/[^\s\-]+/g,function(w){ return (w===w.toLowerCase()||w===w.toUpperCase()) ? w.charAt(0).toUpperCase()+w.slice(1).toLowerCase() : w; }); }
 function normName(s){return String(s||'').trim().toLowerCase().replace(/\s+/g,' ');}
 
 
@@ -1465,25 +1487,44 @@ function loadLocal(){ try{return JSON.parse(localStorage.getItem('mea26_local')|
 function saveLocal(){ try{localStorage.setItem('mea26_local',JSON.stringify(LOCAL))}catch(e){} }
 
 /* ===================== Firebase ===================== */
-function setLiveBadge(state){
+function setLiveBadge(state,reason){
   const el=document.getElementById('statusPill'); if(!el) return;
   el.classList.remove('live','practice','connecting');
   if(state==='live'){ el.classList.add('live'); el.innerHTML='<span class="dot"></span> Live tracking on'; }
   else if(state==='connecting'){ el.classList.add('connecting'); el.innerHTML='<span class="dot"></span> Connecting…'; }
-  else { el.classList.add('practice'); el.innerHTML='<span class="dot"></span> Practice mode · scores saved on this device only'; }
+  else { el.classList.add('practice'); el.innerHTML='<span class="dot"></span> ⚠️ Not saving online · scores stay on this device only'+(reason?' <span style="font-weight:600;opacity:.85">('+reason+')</span>':''); }
+}
+function fbReason(e){
+  const m=String((e&&e.code)||(e&&e.message)||e||'');
+  if(/permission/i.test(m)) return 'Firebase rules are blocking it';
+  if(/network|offline|disconnect|timeout/i.test(m)) return 'no connection';
+  return 'connection problem';
+}
+/* called whenever an online save/read fails: switch to this-device saving instead of losing progress */
+function fbFail(e){
+  console.warn('Firebase problem',e);
+  if(!FB_LIVE) return;
+  FB_LIVE=false; setLiveBadge('practice',fbReason(e));
+  toast('⚠️ Could not save online — saving on this device only');
 }
 function initFirebase(){
   const cfg=FIREBASE_CONFIG;
   if(!cfg || String(cfg.apiKey).indexOf('PASTE')===0 || String(cfg.databaseURL).indexOf('PASTE')>=0){
-    FB_LIVE=false; setLiveBadge('practice'); return;
+    FB_LIVE=false; setLiveBadge('practice','no Firebase keys in the file'); return;
   }
+  if(typeof firebase==='undefined'){ FB_LIVE=false; setLiveBadge('practice','Firebase is blocked on this network'); return; }
   try{
     firebase.initializeApp(cfg); DB=firebase.database(); FB_LIVE=true;
     setLiveBadge('connecting');
-    DB.ref(DBP+'players').limitToFirst(1).get().catch(function(e){ console.warn('Firebase not reachable or rules block mea26/',e); FB_LIVE=false; setLiveBadge('practice'); });
-    DB.ref('.info/connected').on('value', s=>{ setLiveBadge(s.val()===true?'live':'connecting'); });
+    // prove we can both READ and WRITE before trusting the connection
+    DB.ref(DBP+'players').limitToFirst(1).get()
+      .then(function(){ return DB.ref(DBP+'locks/_probe/ok').set(1); })
+      .then(function(){ return DB.ref(DBP+'locks/_probe').remove(); })
+      .then(function(){ if(FB_LIVE) setLiveBadge('live'); })
+      .catch(fbFail);
+    DB.ref('.info/connected').on('value', s=>{ if(FB_LIVE) setLiveBadge(s.val()===true?'live':'connecting'); });
   }
-  catch(e){ console.warn('Firebase init failed',e); FB_LIVE=false; setLiveBadge('practice'); }
+  catch(e){ FB_LIVE=true; fbFail(e); }
 }
 
 /* player record helpers */
@@ -1549,23 +1590,23 @@ document.getElementById('startBtn').onclick=()=>{
   if(!selGrade){ toast('Pick your grade 👆'); return; }
   const nameMsg=nameProblem(first,last);
   if(nameMsg){ toast(nameMsg); return; }
-  const name=first+' '+last;
+  const name=prettyName(first)+' '+prettyName(last);
   const id=(_fold(name).replace(/['’.]/g,'').replace(/[^a-z0-9]/g,'-')+'-g'+selGrade).replace(/-+/g,'-').replace(/^-/,'');
   ME={id:id,name:name,first:first,last:last,grade:selGrade};
   document.documentElement.style.setProperty('--grade',CONTENT.grades[selGrade].color);
-  ensurePlayer().catch(e=>{ console.warn(e); FB_LIVE=false; setLiveBadge('practice'); return ensurePlayer(); }).then(()=>{ document.getElementById('coinBox').style.visibility='visible'; show('hub'); });
+  ensurePlayer().catch(e=>{ fbFail(e); return ensurePlayer(); }).then(()=>{ document.getElementById('coinBox').style.visibility='visible'; show('hub'); });
 };
 
 function ensurePlayer(){
   if(FB_LIVE){
     return playerRef().transaction(cur=>{
       if(!cur){ return blankPlayer(ME.name,ME.grade); }
-      cur.name=ME.name; cur.grade=ME.grade; return cur;
+      cur.name=cur.name||ME.name; cur.grade=ME.grade; return cur;
     }).then(()=>true);
   } else {
     LOCAL.players=LOCAL.players||{};
     if(!LOCAL.players[ME.id]) LOCAL.players[ME.id]=blankPlayer(ME.name,ME.grade);
-    else { LOCAL.players[ME.id].name=ME.name; LOCAL.players[ME.id].grade=ME.grade; }
+    else { LOCAL.players[ME.id].name=LOCAL.players[ME.id].name||ME.name; LOCAL.players[ME.id].grade=ME.grade; }
     LOCAL.locks=LOCAL.locks||{}; LOCAL.locks[ME.id]=LOCAL.locks[ME.id]||{};
     saveLocal(); return Promise.resolve(true);
   }
@@ -1577,11 +1618,11 @@ function signOut(){ ME=null; document.getElementById('coinBox').style.visibility
 
 /* read my player record (returns promise of record) */
 function getMe(){
-  if(FB_LIVE) return playerRef().get().then(s=>s.val()||blankPlayer(ME.name,ME.grade));
+  if(FB_LIVE) return playerRef().get().then(s=>s.val()||blankPlayer(ME.name,ME.grade)).catch(function(e){ fbFail(e); return blankPlayer(ME.name,ME.grade); });
   return Promise.resolve((LOCAL.players&&LOCAL.players[ME.id])||blankPlayer(ME.name,ME.grade));
 }
 function getLocks(){
-  if(FB_LIVE) return DB.ref(DBP+'locks/'+ME.id).get().then(s=>s.val()||{});
+  if(FB_LIVE) return DB.ref(DBP+'locks/'+ME.id).get().then(s=>s.val()||{}).catch(function(e){ fbFail(e); return {}; });
   return Promise.resolve((LOCAL.locks&&LOCAL.locks[ME.id])||{});
 }
 
@@ -1734,7 +1775,7 @@ function answer(item,choice,btn){
 }
 
 function writeLock(qkey){
-  if(FB_LIVE){ lockRef(qkey).set(1); }
+  if(FB_LIVE){ lockRef(qkey).set(1).catch(function(e){ fbFail(e); writeLock(qkey); }); }
   else { LOCAL.locks=LOCAL.locks||{}; LOCAL.locks[ME.id]=LOCAL.locks[ME.id]||{}; LOCAL.locks[ME.id][qkey]=1; saveLocal(); }
 }
 
@@ -1776,9 +1817,9 @@ function commitPoints(gain,correct){
     return playerRef().transaction(cur=>{
       cur=cur||blankPlayer(ME.name,ME.grade);
       cur.points=(cur.points||0)+gain; cur.correct=(cur.correct||0)+correct;
-      cur.answered=(cur.answered||0)+correct; cur.name=ME.name; cur.grade=ME.grade; cur.updated=Date.now();
+      cur.answered=(cur.answered||0)+correct; cur.name=cur.name||ME.name; cur.grade=ME.grade; cur.updated=Date.now();
       return cur;
-    }).then(()=>{});
+    }).then(()=>{}).catch(function(e){ fbFail(e); return commitPoints(gain,correct); });
   } else {
     LOCAL.players=LOCAL.players||{}; const p=LOCAL.players[ME.id]||blankPlayer(ME.name,ME.grade);
     p.points=(p.points||0)+gain; p.correct=(p.correct||0)+correct; p.updated=Date.now();
@@ -1892,9 +1933,9 @@ function commitArcade(){
       cur.mathPoints=(cur.mathPoints||0)+gained;
       cur.mathBest=Math.max(cur.mathBest||0,gained);
       cur.factsSeconds=(cur.factsSeconds||0)+secs;
-      cur.name=ME.name;cur.grade=ME.grade;cur.updated=Date.now();
+      cur.name=cur.name||ME.name;cur.grade=ME.grade;cur.updated=Date.now();
       return cur;
-    }).then(r=>r.snapshot.val());
+    }).then(r=>r.snapshot.val()).catch(function(e){ fbFail(e); AC.committed=false; return commitArcade(); });
   } else {
     LOCAL.players=LOCAL.players||{}; const p=LOCAL.players[ME.id]||blankPlayer(ME.name,ME.grade);
     p.points=(p.points||0)+gained; p.mathPoints=(p.mathPoints||0)+gained;
@@ -2010,7 +2051,7 @@ function lbRows(arr,key){
 }
 function renderBoard(){
   const banner=document.getElementById('lbBanner');
-  if(!FB_LIVE){ banner.style.display='flex'; banner.innerHTML='ℹ️ <span><b>Practice mode.</b> Add your Firebase keys in the code to turn on the live, shared leaderboard for the whole school.</span>'; }
+  if(!FB_LIVE){ banner.style.display='flex'; banner.innerHTML='⚠️ <span><b>Not connected.</b> This leaderboard only shows scores from this device. Ask your teacher to check the Firebase connection.</span>'; }
   else banner.style.display='none';
   ['lbListK','lbListM'].forEach(id=>{ document.getElementById(id).innerHTML='<p class="muted" style="text-align:center;padding:20px">Loading…</p>'; });
   fetchPlayers().then(players=>{
@@ -2022,7 +2063,7 @@ function renderBoard(){
   });
 }
 function fetchPlayers(){
-  if(FB_LIVE) return DB.ref(DBP+'players').get().then(s=>s.val()||{});
+  if(FB_LIVE) return DB.ref(DBP+'players').get().then(s=>s.val()||{}).catch(function(e){ fbFail(e); return LOCAL.players||{}; });
   return Promise.resolve((LOCAL.players)||{});
 }
 
